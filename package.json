@@ -1,6 +1,6 @@
 {
   "name": "@fleekxyz/proxy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Proxy for your Fleek edge functions",
   "main": "dist/main/index.js",
   "types": "dist/main/index.d.ts",

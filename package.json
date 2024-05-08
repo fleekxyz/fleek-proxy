@@ -29,7 +29,7 @@
     "*": [
       "prettier . --check",
       "eslint",
-      "jest"
+      "jest --passWithNoTests"
     ]
   },
   "devDependencies": {

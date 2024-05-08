@@ -13,8 +13,16 @@
 
 # Installation
 
-```
+- **npm**
+
+```bash
 npm install @fleekxyz/proxy
+```
+
+- **pnpm**
+
+```bash
+pnpm install @fleekxyz/proxy
 ```
 
 # Usage
@@ -35,12 +43,28 @@ const proxy = createProxy({
   },
 });
 
-// Proxy the request and handle the response
-
 export async function main(req: FleekRequest): Promise<FleekResponse> {
   return await proxy.proxyRequest(req);
 }
 ```
+
+# Release Process
+
+This project follows SemVer for versioning. Here's how to release a new version:
+
+1. **Update Version Number**: Bump the version number in package.json using npm version (patch/minor/major). This will update the version number in package.json and create a new Git tag.
+
+```bash
+pnpm version patch
+```
+
+2. **Push Changes and Tags**
+
+```bash
+git push origin main --follow-tags
+```
+
+3. **GitHub Actions Automation**: A GitHub Actions workflow automatically publishes the package to npm when a new tag is pushed.
 
 # Contributing
 

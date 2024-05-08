@@ -42,4 +42,4 @@ jobs:
           commit: 'false'
 
       - name: Publish package
-        run: pnpm publish --access=public --no-git-checks --tag=${{ github.ref_name }}
+        run: pnpm publish --access=public --no-git-checks

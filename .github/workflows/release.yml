@@ -32,6 +32,14 @@ jobs:
       - name: Build package
         run: pnpm build
 
-      - uses: simenandre/publish-with-pnpm@v1
+      - name: Set NPM profile for publishing packages
+        uses: franzbischoff/replace_envs@v1
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          npm-auth-token: ${{ secrets.NPM_TOKEN }}
+          from_file: '.npmrc.template'
+          to_file: '.npmrc'
+          commit: 'false'
+
+      - name: Publish package
+        run: pnpm publish --tag=${{ github.ref_name }}

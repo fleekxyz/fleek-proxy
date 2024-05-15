@@ -16,13 +16,13 @@
 - **npm**
 
 ```bash
-npm install @fleekxyz/proxy
+npm install @fleek-platform/proxy
 ```
 
 - **pnpm**
 
 ```bash
-pnpm install @fleekxyz/proxy
+pnpm install @fleek-platform/proxy
 ```
 
 # Usage
@@ -30,7 +30,7 @@ pnpm install @fleekxyz/proxy
 Here's a basic example of a Fleek edge function, demonstrating how to configure and use the proxy package.
 
 ```typescript
-import { createProxy, FleekRequest, FleekResponse } from '@fleekxyz/proxy';
+import { createProxy, FleekRequest, FleekResponse } from '@fleek-platform/proxy';
 
 // Define your routing rules
 const proxy = createProxy({
